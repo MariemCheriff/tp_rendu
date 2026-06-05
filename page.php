@@ -6,7 +6,8 @@ $search = $_GET['search'] ?? '';
 $sql = "SELECT * FROM film
         WHERE Titre LIKE :search
         OR An LIKE :search
-        OR Rang LIKE :search";
+        OR Rang LIKE :search
+        OR Fid LIKE :search";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
